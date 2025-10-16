@@ -8,51 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Premium Blue eCommerce Theme */
-    --background: 0 0% 97.3%; /* #F8F9FA */
-    --foreground: 214 16% 23.1%; /* #343A40 */
+    /* Dark Blue-Black Professional Theme */
+    --background: 220 26% 14%; /* Dark background */
+    --foreground: 0 0% 95%; /* Light text */
 
-    --card: 0 0% 100%;
-    --card-foreground: 214 16% 23.1%;
+    --card: 220 24% 18%; /* Dark card */
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 214 16% 23.1%;
+    --popover: 220 24% 18%;
+    --popover-foreground: 0 0% 95%;
 
     /* Primary Electric Blue */
-    --primary: 211 100% 50%; /* #007BFF */
+    --primary: 217 91% 60%; /* Bright blue */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 211 100% 35%; /* #0056b3 */
+    --primary-dark: 217 91% 45%; /* Darker blue */
+    --primary-glow: 217 91% 70%;
     
-    /* Secondary Light Blue */
-    --secondary: 207 89% 86.1%; /* #E3F2FD */
-    --secondary-foreground: 211 100% 50%;
+    /* Secondary Dark */
+    --secondary: 220 20% 22%;
+    --secondary-foreground: 0 0% 90%;
 
-    /* Muted/Gray tones */
-    --muted: 210 17% 82.4%; /* Light gray */
-    --muted-foreground: 210 7% 46.1%; /* #6C757D */
+    /* Muted Dark tones */
+    --muted: 220 18% 25%;
+    --muted-foreground: 220 10% 65%;
 
-    /* Accent Orange/Red for urgency */
-    --accent: 9 100% 71%; /* #FF6B6B */
+    /* Accent for urgency */
+    --accent: 217 91% 55%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 211 100% 50%;
+    --border: 220 20% 28%;
+    --input: 220 20% 25%;
+    --ring: 217 91% 60%;
 
-    --radius: 1.25rem; /* 20px for modern rounded cards */
+    --radius: 0.75rem;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(211 100% 50%), hsl(211 100% 35%));
-    --gradient-hero: linear-gradient(135deg, hsl(211 100% 50% / 0.95), hsl(211 100% 35% / 0.95));
-    --gradient-accent: linear-gradient(135deg, hsl(9 100% 71%), hsl(14 100% 66%));
+    /* Gradients - Dark Theme */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 45%), hsl(217 91% 30%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 26% 14%), hsl(217 40% 20%));
+    --gradient-accent: linear-gradient(135deg, hsl(217 91% 60%), hsl(217 91% 45%));
     
-    /* Shadows */
-    --shadow-card: 0 8px 32px hsla(211 100% 50% / 0.12);
-    --shadow-hover: 0 12px 40px hsla(211 100% 50% / 0.2);
-    --shadow-glow: 0 0 25px hsla(211 100% 50% / 0.35);
+    /* Enhanced Shadows for Dark */
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 12px 48px rgba(59, 130, 246, 0.4);
+    --shadow-glow: 0 0 30px rgba(59, 130, 246, 0.5);
     
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);

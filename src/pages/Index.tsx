@@ -4,6 +4,8 @@ import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Reviews from '@/components/Reviews';
 import ProductDetail from '@/components/ProductDetail';
+import About from '@/components/About';
+import ReviewForm from '@/components/ReviewForm';
 import Footer from '@/components/Footer';
 
 // Import libraries
@@ -96,7 +98,7 @@ const Index = () => {
       }, 4000);
     };
 
-    const toastInterval = setInterval(showToast, Math.random() * 4000 + 8000);
+    const toastInterval = setInterval(showToast, 30000); // Every 30 seconds
 
     return () => {
       clearInterval(toastInterval);
@@ -108,9 +110,11 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <ProductDetail />
         <Features />
         <Reviews />
-        <ProductDetail />
+        <ReviewForm />
+        <About />
       </main>
       <Footer />
     </div>

@@ -34,9 +34,9 @@ const Header = () => {
           <button
             onClick={() => scrollToSection('hero')}
             className="text-white font-bold text-2xl tracking-wide hover:opacity-90 transition-opacity"
-            aria-label="Visionary Ventures - Home"
+            aria-label="visionaryX store - Home"
           >
-            Visionary Ventures
+            visionaryX store
           </button>
 
           {/* Desktop Navigation */}
@@ -47,22 +47,14 @@ const Header = () => {
             >
               Home
             </button>
-            <div className="relative group">
-              <button
-                onClick={() => scrollToSection('product-detail')}
-                className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
-              >
-                Products
-              </button>
-            </div>
             <button
-              onClick={() => scrollToSection('features')}
+              onClick={() => scrollToSection('about')}
               className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection('footer')}
+              onClick={() => scrollToSection('contact')}
               className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
             >
               Contact
@@ -80,17 +72,6 @@ const Header = () => {
             >
               ₹99 NNN Challenge – Limited!
             </Button>
-
-            {/* Cart Icon */}
-            <button
-              className="relative p-2 text-white hover:opacity-80 transition-opacity"
-              aria-label="Shopping cart"
-            >
-              <ShoppingBag className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 bg-accent text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                0
-              </span>
-            </button>
 
             {/* Mobile menu button */}
             <button
@@ -118,19 +99,13 @@ const Header = () => {
               Home
             </button>
             <button
-              onClick={() => scrollToSection('product-detail')}
-              className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
-            >
-              Products
-            </button>
-            <button
-              onClick={() => scrollToSection('features')}
+              onClick={() => scrollToSection('about')}
               className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
             >
               About
             </button>
             <button
-              onClick={() => scrollToSection('footer')}
+              onClick={() => scrollToSection('contact')}
               className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
             >
               Contact

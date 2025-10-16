@@ -15,7 +15,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      const saleEndDate = new Date('2025-11-21T23:59:59+05:30').getTime();
+      const saleEndDate = new Date('2025-10-21T23:59:59+05:30').getTime();
       const now = new Date().getTime();
       const difference = saleEndDate - now;
 
@@ -55,7 +55,7 @@ const ProductDetail = () => {
   return (
     <section id="product-detail" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-4xl">
-        <div className="bg-card rounded-[20px] p-8 md:p-12 shadow-card">
+        <div className="bg-card rounded-[20px] p-8 md:p-12 shadow-card border border-primary/20">
           {/* 3D Rotating Mockup */}
           <div
             className="mb-12 flex justify-center"

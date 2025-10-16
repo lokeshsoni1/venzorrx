@@ -14,11 +14,11 @@ const Features = () => {
     },
     {
       icon: Calendar,
-      title: '30-Day Rituals',
+      title: '60-Day Battle Plan (9 Weeks)',
       bullets: [
-        '• Daily micro-habits that stack discipline',
-        '• Proven techniques from real NNN survivors',
-        '• Quick-read format for busy schedules',
+        '• 9-week strategies for complete transformation',
+        '• Daily rituals to maintain unbreakable focus',
+        '• Emergency tactics for high-risk moments',
       ],
       closer: 'Consistency is the NNN key.',
     },
@@ -35,14 +35,21 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 px-4 bg-secondary">
+    <section id="features" className="py-20 px-4 bg-card">
       <div className="container mx-auto max-w-6xl">
         <h2
-          className="text-3xl md:text-5xl font-bold text-center text-primary mb-16"
+          className="text-3xl md:text-5xl font-bold text-center text-primary mb-4"
           data-aos="fade-up"
         >
           Why This NNN Guide Works
         </h2>
+        <p
+          className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          60 days of laser-focused strategies designed for the ultimate No Nut November victory
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => {
