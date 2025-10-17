@@ -71,11 +71,12 @@ const Reviews = () => {
   }, []);
 
   return (
-    <section id="reviews" className="py-20 px-4 bg-card">
+    <section id="reviews" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
         <h2
-          className="text-3xl md:text-5xl font-bold text-center text-primary mb-4"
+          className="text-3xl md:text-5xl font-bold text-center mb-4"
           data-aos="fade-up"
+          style={{ color: 'hsl(var(--primary))' }}
         >
           Real NNN Warriors, Real Results
         </h2>
@@ -87,13 +88,13 @@ const Reviews = () => {
               <Star key={i} className="w-6 h-6 fill-yellow-400 text-yellow-400" />
             ))}
           </div>
-          <p className="text-xl font-semibold text-foreground">
-            4.9/5 - Trusted by 500+ People
+          <p className="text-xl font-semibold" style={{ color: 'hsl(var(--foreground))' }}>
+            4.9/5 - Trusted by 500+ NNN Warriors
           </p>
-          <div className="max-w-md mx-auto mt-4 bg-secondary rounded-full h-3 overflow-hidden">
+          <div className="max-w-md mx-auto mt-4 rounded-full h-3 overflow-hidden" style={{ backgroundColor: 'hsl(var(--secondary))' }}>
             <div
-              className="bg-primary h-full transition-all duration-1000"
-              style={{ width: '98%' }}
+              className="h-full transition-all duration-1000"
+              style={{ width: '98%', backgroundColor: 'hsl(var(--primary))' }}
               data-aos="slide-right"
               data-aos-delay="400"
             ></div>
@@ -105,10 +106,10 @@ const Reviews = () => {
           <div className="swiper-wrapper">
             {reviews.map((review, index) => (
               <div key={index} className="swiper-slide">
-                <div className="bg-secondary/50 rounded-[20px] p-6 h-full flex flex-col">
+                <div className="rounded-[20px] p-6 h-full flex flex-col border border-border" style={{ backgroundColor: 'hsl(var(--card))' }}>
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl" style={{ backgroundColor: 'hsl(var(--primary) / 0.1)', color: 'hsl(var(--primary))' }}>
                       {review.name.charAt(0)}
                     </div>
                   </div>
@@ -121,12 +122,12 @@ const Reviews = () => {
                   </div>
 
                   {/* Quote */}
-                  <p className="text-muted-foreground text-center italic text-sm mb-4 flex-grow">
+                  <p className="text-center italic text-sm mb-4 flex-grow" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     "{review.quote}"
                   </p>
 
                   {/* Name & location */}
-                  <p className="text-primary font-semibold text-center text-sm">
+                  <p className="font-semibold text-center text-sm" style={{ color: 'hsl(var(--primary))' }}>
                     {review.name}, {review.location}
                   </p>
                 </div>

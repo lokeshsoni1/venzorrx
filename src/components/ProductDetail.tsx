@@ -15,6 +15,7 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
+      // Timer runs from Oct 17, 2025 to Oct 21, 2025 23:59:59 IST
       const saleEndDate = new Date('2025-10-21T23:59:59+05:30').getTime();
       const now = new Date().getTime();
       const difference = saleEndDate - now;
@@ -143,12 +144,12 @@ const ProductDetail = () => {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               {/* Pricing */}
               <div className="text-center md:text-left">
-                <p className="text-white/70 text-xl line-through mb-2">₹199</p>
+                <p className="text-white/70 text-xl line-through mb-2">₹249</p>
                 <p className="text-white text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
                   JUST ₹99
                 </p>
                 <span className="inline-block bg-green-500 text-white px-4 py-2 rounded-full font-semibold animate-pulse-glow">
-                  SAVE ₹100 (50%)!
+                  SAVE ₹150 (60%)!
                 </span>
               </div>
 

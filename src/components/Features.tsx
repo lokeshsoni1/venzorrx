@@ -35,18 +35,20 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-20 px-4 bg-card">
+    <section id="features" className="py-20 px-4 bg-secondary">
       <div className="container mx-auto max-w-6xl">
         <h2
-          className="text-3xl md:text-5xl font-bold text-center text-primary mb-4"
+          className="text-3xl md:text-5xl font-bold text-center mb-4"
           data-aos="fade-up"
+          style={{ color: 'hsl(var(--primary))' }}
         >
-          Why This NNN Guide Works
+          Why NNN Guide Works
         </h2>
         <p
-          className="text-center text-muted-foreground text-lg mb-12 max-w-2xl mx-auto"
+          className="text-center text-lg mb-12 max-w-2xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
+          style={{ color: 'hsl(var(--muted-foreground))' }}
         >
           60 days of laser-focused strategies designed for the ultimate No Nut November victory
         </p>
@@ -57,33 +59,33 @@ const Features = () => {
             return (
               <div
                 key={index}
-                className="bg-card rounded-[20px] p-8 shadow-card hover-lift"
+                className="bg-card rounded-[20px] p-8 shadow-card border border-border hover:shadow-hover transition-all"
                 data-aos="fade-up"
                 data-aos-delay={200 * index}
               >
                 {/* Icon */}
                 <div className="flex justify-center mb-6">
-                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
-                    <Icon className="w-8 h-8 text-primary" />
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: 'hsl(var(--primary) / 0.1)' }}>
+                    <Icon className="w-8 h-8" style={{ color: 'hsl(var(--primary))' }} />
                   </div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl md:text-2xl font-semibold text-primary text-center mb-4">
+                <h3 className="text-xl md:text-2xl font-semibold text-center mb-4" style={{ color: 'hsl(var(--primary))' }}>
                   {feature.title}
                 </h3>
 
                 {/* Bullets */}
                 <ul className="space-y-2 mb-4">
                   {feature.bullets.map((bullet, i) => (
-                    <li key={i} className="text-muted-foreground text-sm md:text-base">
+                    <li key={i} className="text-sm md:text-base" style={{ color: 'hsl(var(--muted-foreground))' }}>
                       {bullet}
                     </li>
                   ))}
                 </ul>
 
                 {/* Closer */}
-                <p className="text-primary font-medium text-center text-sm italic">
+                <p className="font-medium text-center text-sm italic" style={{ color: 'hsl(var(--primary))' }}>
                   {feature.closer}
                 </p>
               </div>

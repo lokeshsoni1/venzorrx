@@ -27,24 +27,26 @@ const ReviewForm = () => {
   };
 
   return (
-    <section className="py-20 px-4 bg-background">
+    <section className="py-20 px-4 bg-secondary">
       <div className="container mx-auto max-w-2xl">
         <h2
-          className="text-3xl md:text-4xl font-bold text-center text-primary mb-4"
+          className="text-3xl md:text-4xl font-bold text-center mb-4"
           data-aos="fade-up"
+          style={{ color: 'hsl(var(--primary))' }}
         >
-          Share Your Experience
+          Share Your NNN Success Story
         </h2>
         <p
-          className="text-center text-muted-foreground mb-8"
+          className="text-center mb-8"
           data-aos="fade-up"
           data-aos-delay="100"
+          style={{ color: 'hsl(var(--muted-foreground))' }}
         >
-          Bought our product? We'd love to hear from you!
+          Bought our product? We'd love to hear from you! (English/Hinglish welcome)
         </p>
 
         <div
-          className="bg-card rounded-[20px] p-8 md:p-10 shadow-card border border-primary/20"
+          className="bg-card rounded-[20px] p-8 md:p-10 shadow-card border border-border"
           data-aos="fade-up"
           data-aos-delay="200"
         >

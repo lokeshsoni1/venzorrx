@@ -25,15 +25,15 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 h-[70px] bg-gradient-primary transition-all duration-300 ${
-          isScrolled ? 'shadow-glow' : ''
+        className={`fixed top-0 left-0 right-0 z-50 h-[70px] bg-white border-b border-border transition-all duration-300 ${
+          isScrolled ? 'shadow-card' : ''
         }`}
       >
         <div className="container mx-auto px-4 h-full flex items-center justify-between">
           {/* Logo */}
           <button
             onClick={() => scrollToSection('hero')}
-            className="text-white font-bold text-2xl tracking-wide hover:opacity-90 transition-opacity"
+            className="text-foreground font-bold text-2xl tracking-wide hover:text-primary transition-colors"
             aria-label="visionaryX store - Home"
           >
             visionaryX store
@@ -43,19 +43,19 @@ const Header = () => {
           <nav className="hidden md:flex items-center gap-10" aria-label="Main navigation">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              className="text-muted-foreground hover:text-primary font-medium transition-all relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              className="text-muted-foreground hover:text-primary font-medium transition-all relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-white/90 hover:text-white font-medium transition-all hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              className="text-muted-foreground hover:text-primary font-medium transition-all relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all hover:after:w-full"
             >
               Contact
             </button>
@@ -66,9 +66,8 @@ const Header = () => {
             {/* Mini CTA */}
             <Button
               onClick={() => scrollToSection('product-detail')}
-              variant="secondary"
               size="sm"
-              className="hidden lg:flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white border-white/20 animate-pulse-glow font-semibold"
+              className="hidden lg:flex items-center gap-2 bg-primary hover:bg-primary-dark text-white animate-pulse-glow font-semibold"
             >
               ₹99 NNN Challenge – Limited!
             </Button>
@@ -76,7 +75,7 @@ const Header = () => {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-white"
+              className="md:hidden p-2 text-foreground"
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -88,25 +87,25 @@ const Header = () => {
       {/* Mobile Menu Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-primary-dark/95 backdrop-blur-md z-40 md:hidden"
+          className="fixed inset-0 bg-white/95 backdrop-blur-md z-40 md:hidden border-t border-border"
           style={{ top: '70px' }}
         >
           <nav className="flex flex-col items-center justify-center h-full gap-8">
             <button
               onClick={() => scrollToSection('hero')}
-              className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
+              className="text-foreground text-2xl font-semibold hover:text-primary transition-colors"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection('about')}
-              className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
+              className="text-foreground text-2xl font-semibold hover:text-primary transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection('contact')}
-              className="text-white text-2xl font-semibold hover:text-white/80 transition-colors"
+              className="text-foreground text-2xl font-semibold hover:text-primary transition-colors"
             >
               Contact
             </button>

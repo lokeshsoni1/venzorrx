@@ -1,4 +1,4 @@
-import { Instagram } from 'lucide-react';
+import { Instagram, Send } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -11,18 +11,29 @@ const Footer = () => {
           </p>
 
           {/* Divider */}
-          <div className="w-full max-w-md h-px bg-primary/20"></div>
+          <div className="w-full max-w-md h-px" style={{ backgroundColor: 'hsl(var(--primary) / 0.2)' }}></div>
 
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="https://www.instagram.com/vvagency.official/"
+              href="https://www.instagram.com/visionaryx.official/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-primary-dark transition-colors hover:scale-110 transform"
+              className="transition-all hover:scale-110 transform"
+              style={{ color: 'hsl(var(--primary))' }}
               aria-label="Instagram"
             >
               <Instagram className="w-6 h-6" />
+            </a>
+            <a
+              href="https://t.me/+SUIBDkIacF02OWE1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="transition-all hover:scale-110 transform"
+              style={{ color: 'hsl(var(--primary))' }}
+              aria-label="Telegram"
+            >
+              <Send className="w-6 h-6" />
             </a>
           </div>
         </div>
