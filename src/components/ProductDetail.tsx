@@ -80,28 +80,28 @@ const ProductDetail = () => {
           {/* Description */}
           <div className="mb-8 space-y-4 max-w-2xl mx-auto">
             <p
-              className="text-lg md:text-xl font-medium leading-relaxed"
+              className="text-lg md:text-xl font-medium leading-relaxed break-words"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               <span className="text-primary font-bold">🔥 Conquer No Nut November:</span> Your 15-page blueprint for ironclad discipline and mindset reset—no distractions, all dominance!
             </p>
             <p
-              className="text-lg md:text-xl font-medium leading-relaxed"
+              className="text-lg md:text-xl font-medium leading-relaxed break-words"
               data-aos="fade-up"
               data-aos-delay="400"
             >
               <span className="text-primary font-bold">📖 Built for Indian warriors:</span> Quick NNN rituals, real stories from survivors in Delhi to Hyderabad, and hacks for your high-stress life.
             </p>
             <p
-              className="text-lg md:text-xl font-medium leading-relaxed"
+              className="text-lg md:text-xl font-medium leading-relaxed break-words"
               data-aos="fade-up"
               data-aos-delay="600"
             >
               <span className="text-primary font-bold">💡 Why 15 pages?</span> Precision over padding—NNN wins in days, fueled by psych-proven tactics for the ultimate challenge.
             </p>
             <p
-              className="text-lg md:text-xl font-medium leading-relaxed"
+              className="text-lg md:text-xl font-medium leading-relaxed break-words"
               data-aos="fade-up"
               data-aos-delay="800"
             >
@@ -137,30 +137,30 @@ const ProductDetail = () => {
 
           {/* Pricing & Timer */}
           <div
-            className="bg-gradient-primary rounded-[20px] p-4 md:p-8 mb-8 max-w-[90vw] mx-auto"
+            className="bg-gradient-primary rounded-[20px] p-6 md:p-8 mb-8 w-full max-w-4xl mx-auto"
             data-aos="zoom-in"
             data-aos-delay="1200"
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
               {/* Pricing */}
-              <div className="text-center md:text-left">
-                <p className="text-white/70 text-base md:text-xl line-through mb-1 md:mb-2">₹249</p>
-                <p className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-1 md:mb-2 drop-shadow-lg">
+              <div className="text-center md:text-left flex-shrink-0">
+                <p className="text-white/70 text-sm md:text-lg line-through mb-1 break-words">₹249</p>
+                <p className="text-white text-2xl md:text-4xl lg:text-5xl font-bold mb-2 drop-shadow-lg break-words">
                   JUST ₹99
                 </p>
-                <span className="inline-block bg-green-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-sm md:text-base animate-pulse-glow">
+                <span className="inline-block bg-green-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-xs md:text-sm animate-pulse-glow whitespace-nowrap">
                   SAVE ₹150 (60%)!
                 </span>
               </div>
 
               {/* Timer */}
-              <div className="text-center w-full md:w-auto">
-                <p className="text-white font-semibold text-sm md:text-lg mb-2 md:mb-3">⏰ NNN Sale Ends In:</p>
-                <div className="flex gap-2 md:gap-3 justify-center">
+              <div className="text-center w-full md:w-auto flex-shrink-0">
+                <p className="text-white font-semibold text-xs md:text-base mb-2 md:mb-3 break-words">⏰ NNN Sale Ends In:</p>
+                <div className="flex gap-1.5 md:gap-2 justify-center flex-wrap">
                   {Object.entries(timeLeft).map(([unit, value]) => (
-                    <div key={unit} className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-2 md:px-4 md:py-3 min-w-[50px] md:min-w-[60px]">
-                      <div className="text-white text-xl md:text-3xl font-bold">{value.toString().padStart(2, '0')}</div>
-                      <div className="text-white/80 text-[0.65rem] md:text-xs uppercase mt-0.5 md:mt-1">{unit}</div>
+                    <div key={unit} className="bg-white/20 backdrop-blur-sm rounded-lg px-1.5 py-1.5 md:px-3 md:py-2 min-w-[45px] md:min-w-[55px] flex-shrink-0">
+                      <div className="text-white text-base md:text-2xl font-bold break-words">{value.toString().padStart(2, '0')}</div>
+                      <div className="text-white/80 text-[0.55rem] md:text-[0.65rem] uppercase mt-0.5 break-words">{unit}</div>
                     </div>
                   ))}
                 </div>
@@ -172,12 +172,12 @@ const ProductDetail = () => {
           <Button
             onClick={handleBuyNow}
             size="lg"
-            className="w-full bg-gradient-primary hover:bg-primary-dark text-white font-bold text-xl py-8 rounded-full animate-pulse-glow transition-all hover:animate-shake"
+            className="w-full bg-gradient-primary hover:bg-primary-dark text-white font-bold text-lg md:text-xl py-6 md:py-8 rounded-full animate-pulse-glow transition-all hover:animate-shake break-words"
             data-aos="zoom-in"
             data-aos-delay="1400"
           >
-            <Lock className="w-5 h-5 mr-2" />
-            🚀 BUY NOW – Instant NNN PDF via Razorpay (₹99 Secure)
+            <Lock className="w-4 h-4 md:w-5 md:h-5 mr-2 flex-shrink-0" />
+            Buy Now
           </Button>
         </div>
       </div>

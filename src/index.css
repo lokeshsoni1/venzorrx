@@ -72,8 +72,12 @@ All colors MUST be HSL.
     margin: 0;
   }
 
-  * {
+  body, html {
     overflow-x: hidden;
+  }
+  
+  * {
+    overflow-x: clip;
   }
 
   /* Hide Lovable badge */

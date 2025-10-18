@@ -116,14 +116,14 @@ const Reviews = () => {
         </div>
 
         {/* Reviews carousel */}
-        <div className="swiper-container reviews-swiper" data-aos="fade-up" data-aos-delay="400">
+        <div className="swiper-container reviews-swiper overflow-visible" data-aos="fade-up" data-aos-delay="400">
           <div className="swiper-wrapper">
             {reviews.map((review, index) => (
               <div key={index} className="swiper-slide">
-                <div className="rounded-[20px] p-6 h-full flex flex-col border border-border" style={{ backgroundColor: 'hsl(var(--card))' }}>
+                <div className="rounded-[20px] p-6 h-full flex flex-col border border-border break-words" style={{ backgroundColor: 'hsl(var(--card))' }}>
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl" style={{ backgroundColor: 'hsl(var(--primary) / 0.1)', color: 'hsl(var(--primary))' }}>
+                    <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0" style={{ backgroundColor: 'hsl(var(--primary) / 0.1)', color: 'hsl(var(--primary))' }}>
                       {review.name.charAt(0)}
                     </div>
                   </div>
@@ -131,17 +131,17 @@ const Reviews = () => {
                   {/* Stars */}
                   <div className="flex justify-center gap-1 mb-3">
                     {[...Array(review.stars)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400 flex-shrink-0" />
                     ))}
                   </div>
 
                   {/* Quote */}
-                  <p className="text-center italic text-sm mb-4 flex-grow" style={{ color: 'hsl(var(--muted-foreground))' }}>
+                  <p className="text-center italic text-sm mb-4 flex-grow break-words overflow-wrap-anywhere" style={{ color: 'hsl(var(--muted-foreground))' }}>
                     "{review.quote}"
                   </p>
 
                   {/* Name & location */}
-                  <p className="font-semibold text-center text-sm" style={{ color: 'hsl(var(--primary))' }}>
+                  <p className="font-semibold text-center text-sm break-words" style={{ color: 'hsl(var(--primary))' }}>
                     {review.name}, {review.location}
                   </p>
                 </div>
@@ -151,7 +151,7 @@ const Reviews = () => {
 
           {/* Custom pagination text */}
           <div className="mt-8 text-center">
-            <p className="text-sm md:text-base" style={{ color: 'hsl(var(--muted-foreground))', fontFamily: 'Poppins' }}>
+            <p className="text-sm md:text-base break-words" style={{ color: 'hsl(var(--muted-foreground))', fontFamily: 'Poppins' }}>
               Showing {currentSlide} out of {totalReviews} reviews
             </p>
           </div>
