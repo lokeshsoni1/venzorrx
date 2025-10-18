@@ -70,18 +70,16 @@ const Reviews = () => {
   const totalReviews = reviews.length;
 
   useEffect(() => {
-    // Update current slide when Swiper changes
-    const updateSlideNumber = () => {
-      const swiperEl = document.querySelector('.reviews-swiper') as any;
-      if (swiperEl && swiperEl.swiper) {
-        setCurrentSlide(swiperEl.swiper.realIndex + 1);
-      }
+    // Listen for custom slide change event
+    const handleSlideChange = (e: any) => {
+      setCurrentSlide(e.detail.realIndex + 1);
     };
 
-    // Listen for slide changes
-    const interval = setInterval(updateSlideNumber, 100);
+    window.addEventListener('reviewSlideChange', handleSlideChange);
     
-    return () => clearInterval(interval);
+    return () => {
+      window.removeEventListener('reviewSlideChange', handleSlideChange);
+    };
   }, []);
 
   return (
@@ -116,11 +114,11 @@ const Reviews = () => {
         </div>
 
         {/* Reviews carousel */}
-        <div className="swiper-container reviews-swiper overflow-visible" data-aos="fade-up" data-aos-delay="400">
-          <div className="swiper-wrapper">
+        <div className="swiper-container reviews-swiper relative" style={{ overflow: 'visible', paddingBottom: '3rem' }} data-aos="fade-up" data-aos-delay="400">
+          <div className="swiper-wrapper" style={{ display: 'flex' }}>
             {reviews.map((review, index) => (
-              <div key={index} className="swiper-slide">
-                <div className="rounded-[20px] p-6 h-full flex flex-col border border-border break-words" style={{ backgroundColor: 'hsl(var(--card))' }}>
+              <div key={index} className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+                <div className="rounded-[20px] p-6 w-full flex flex-col border border-border break-words" style={{ backgroundColor: 'hsl(var(--card))', minHeight: '280px' }}>
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">
                     <div className="w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl flex-shrink-0" style={{ backgroundColor: 'hsl(var(--primary) / 0.1)', color: 'hsl(var(--primary))' }}>
@@ -148,6 +146,9 @@ const Reviews = () => {
               </div>
             ))}
           </div>
+
+          {/* Swiper pagination dots - hidden but needed for functionality */}
+          <div className="swiper-pagination" style={{ display: 'none' }}></div>
 
           {/* Custom pagination text */}
           <div className="mt-8 text-center">

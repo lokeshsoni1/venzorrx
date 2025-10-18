@@ -34,13 +34,23 @@ const Index = () => {
         slidesPerView: 1,
         spaceBetween: 20,
         loop: true,
+        autoHeight: false,
         autoplay: {
-          delay: 5000,
+          delay: 4000,
           disableOnInteraction: false,
         },
         pagination: {
           el: '.reviews-swiper .swiper-pagination',
           clickable: true,
+        },
+        on: {
+          slideChange: function() {
+            // Update slide counter
+            const event = new CustomEvent('reviewSlideChange', { 
+              detail: { realIndex: this.realIndex }
+            });
+            window.dispatchEvent(event);
+          },
         },
         breakpoints: {
           640: {
@@ -56,15 +66,24 @@ const Index = () => {
       new Swiper('.preview-swiper', {
         modules: [Pagination, Navigation],
         slidesPerView: 1,
-        spaceBetween: 20,
+        spaceBetween: 30,
         loop: true,
+        autoHeight: true,
         pagination: {
           el: '.preview-swiper .swiper-pagination',
           clickable: true,
         },
         navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+          nextEl: '.preview-swiper .swiper-button-next',
+          prevEl: '.preview-swiper .swiper-button-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
         },
       });
     }, 100);

@@ -95,9 +95,9 @@ All colors MUST be HSL.
   /* Premium Animations */
   @keyframes heartbeat {
     0%, 100% { transform: scale(1); }
-    14% { transform: scale(1.1); }
+    14% { transform: scale(1.05); }
     28% { transform: scale(1); }
-    42% { transform: scale(1.1); }
+    42% { transform: scale(1.05); }
     70% { transform: scale(1); }
   }
 
@@ -140,7 +140,9 @@ All colors MUST be HSL.
   }
 
 .animate-heartbeat {
-  animation: heartbeat 2.5s ease-in-out infinite;
+  animation: heartbeat 3s ease-in-out infinite;
+  transform-origin: center;
+  position: relative;
 }
 
 .animate-pulse-glow {

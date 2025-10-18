@@ -114,17 +114,18 @@ const ProductDetail = () => {
             <h3 className="text-2xl font-semibold text-primary text-center mb-6">
               Inside the Guide: Real Pages Preview
             </h3>
-            <div className="swiper-container preview-swiper">
+            <div className="swiper-container preview-swiper relative">
               <div className="swiper-wrapper">
                 {previewPages.map((page, index) => (
-                  <div key={index} className="swiper-slide">
+                  <div key={index} className="swiper-slide h-auto">
                     <div className="border-4 border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
                       <img
                         src={page.src}
                         alt={page.alt}
-                        className="w-full h-auto transform hover:scale-105 transition-transform duration-300"
+                        className="w-full h-auto max-h-[600px] object-contain transform hover:scale-105 transition-transform duration-300"
+                        loading="lazy"
                       />
-                      <p className="text-center text-sm font-medium text-primary py-3 bg-secondary/30">
+                      <p className="text-center text-sm font-medium text-primary py-3 bg-secondary/30 break-words">
                         {page.title}
                       </p>
                     </div>
@@ -132,6 +133,8 @@ const ProductDetail = () => {
                 ))}
               </div>
               <div className="swiper-pagination mt-4"></div>
+              <div className="swiper-button-next"></div>
+              <div className="swiper-button-prev"></div>
             </div>
           </div>
 
