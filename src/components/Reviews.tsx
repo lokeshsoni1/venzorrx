@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 
 // Swiper will be initialized via CDN in the main component
@@ -66,8 +66,22 @@ const Reviews = () => {
     { name: 'Kritika Joshi', location: 'Delhi', quote: 'Motivating aur practical. Perfect combo for NNN victory!', stars: 5 },
   ];
 
+  const [currentSlide, setCurrentSlide] = useState(1);
+  const totalReviews = reviews.length;
+
   useEffect(() => {
-    // Swiper initialization will happen in Index component
+    // Update current slide when Swiper changes
+    const updateSlideNumber = () => {
+      const swiperEl = document.querySelector('.reviews-swiper') as any;
+      if (swiperEl && swiperEl.swiper) {
+        setCurrentSlide(swiperEl.swiper.realIndex + 1);
+      }
+    };
+
+    // Listen for slide changes
+    const interval = setInterval(updateSlideNumber, 100);
+    
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -135,8 +149,12 @@ const Reviews = () => {
             ))}
           </div>
 
-          {/* Pagination */}
-          <div className="swiper-pagination mt-8"></div>
+          {/* Custom pagination text */}
+          <div className="mt-8 text-center">
+            <p className="text-sm md:text-base" style={{ color: 'hsl(var(--muted-foreground))', fontFamily: 'Poppins' }}>
+              Showing {currentSlide} out of {totalReviews} reviews
+            </p>
+          </div>
         </div>
       </div>
     </section>

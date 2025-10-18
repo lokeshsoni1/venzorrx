@@ -137,30 +137,30 @@ const ProductDetail = () => {
 
           {/* Pricing & Timer */}
           <div
-            className="bg-gradient-primary rounded-[20px] p-8 mb-8"
+            className="bg-gradient-primary rounded-[20px] p-4 md:p-8 mb-8 max-w-[90vw] mx-auto"
             data-aos="zoom-in"
             data-aos-delay="1200"
           >
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6">
               {/* Pricing */}
               <div className="text-center md:text-left">
-                <p className="text-white/70 text-xl line-through mb-2">₹249</p>
-                <p className="text-white text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
+                <p className="text-white/70 text-base md:text-xl line-through mb-1 md:mb-2">₹249</p>
+                <p className="text-white text-3xl md:text-5xl lg:text-6xl font-bold mb-1 md:mb-2 drop-shadow-lg">
                   JUST ₹99
                 </p>
-                <span className="inline-block bg-green-500 text-white px-4 py-2 rounded-full font-semibold animate-pulse-glow">
+                <span className="inline-block bg-green-500 text-white px-3 py-1.5 md:px-4 md:py-2 rounded-full font-semibold text-sm md:text-base animate-pulse-glow">
                   SAVE ₹150 (60%)!
                 </span>
               </div>
 
               {/* Timer */}
-              <div className="text-center">
-                <p className="text-white font-semibold text-lg mb-3">⏰ NNN Sale Ends In:</p>
-                <div className="flex gap-3">
+              <div className="text-center w-full md:w-auto">
+                <p className="text-white font-semibold text-sm md:text-lg mb-2 md:mb-3">⏰ NNN Sale Ends In:</p>
+                <div className="flex gap-2 md:gap-3 justify-center">
                   {Object.entries(timeLeft).map(([unit, value]) => (
-                    <div key={unit} className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-3 min-w-[60px]">
-                      <div className="text-white text-3xl font-bold">{value.toString().padStart(2, '0')}</div>
-                      <div className="text-white/80 text-xs uppercase mt-1">{unit}</div>
+                    <div key={unit} className="bg-white/20 backdrop-blur-sm rounded-lg px-2 py-2 md:px-4 md:py-3 min-w-[50px] md:min-w-[60px]">
+                      <div className="text-white text-xl md:text-3xl font-bold">{value.toString().padStart(2, '0')}</div>
+                      <div className="text-white/80 text-[0.65rem] md:text-xs uppercase mt-0.5 md:mt-1">{unit}</div>
                     </div>
                   ))}
                 </div>

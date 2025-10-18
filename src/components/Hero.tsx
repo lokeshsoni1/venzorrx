@@ -40,7 +40,7 @@ const Hero = () => {
             {/* Sale Badge */}
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
               <div className="inline-block px-6 py-3 rounded-full bg-primary text-white font-bold text-sm md:text-base animate-heartbeat shadow-glow">
-                🎉 50% OFF SALE – Only Till Diwali! Limited Edition
+                🎉 60% OFF SALE – Only Till Diwali! Limited Edition
               </div>
             </div>
 
