@@ -38,9 +38,9 @@ const Hero = () => {
         >
           <div className="bg-card rounded-[20px] p-8 md:p-12 shadow-card hover-lift cursor-pointer group relative border border-primary/20" style={{ overflow: 'visible' }}>
             {/* Sale Badge */}
-            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10" style={{ overflow: 'visible', padding: '1rem 0' }}>
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10" style={{ overflow: 'visible', padding: '1.5rem 0' }}>
               <div className="inline-block px-6 py-3 rounded-full bg-primary text-white font-bold text-sm md:text-base animate-heartbeat shadow-glow" style={{ overflow: 'visible' }}>
-                🎉 60% OFF SALE – Only Till Diwali! Limited Edition
+                🎉 60% OFF SALE – Only Till 28th October! Limited Edition
               </div>
             </div>
 

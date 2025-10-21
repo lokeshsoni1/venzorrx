@@ -36,21 +36,12 @@ const Index = () => {
         loop: true,
         autoHeight: false,
         autoplay: {
-          delay: 4000,
+          delay: 5000,
           disableOnInteraction: false,
         },
         pagination: {
           el: '.reviews-swiper .swiper-pagination',
           clickable: true,
-        },
-        on: {
-          slideChange: function() {
-            // Update slide counter
-            const event = new CustomEvent('reviewSlideChange', { 
-              detail: { realIndex: this.realIndex }
-            });
-            window.dispatchEvent(event);
-          },
         },
         breakpoints: {
           640: {

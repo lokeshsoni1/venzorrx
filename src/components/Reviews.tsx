@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
 
 // Swiper will be initialized via CDN in the main component
@@ -66,22 +65,6 @@ const Reviews = () => {
     { name: 'Kritika Joshi', location: 'Delhi', quote: 'Motivating aur practical. Perfect combo for NNN victory!', stars: 5 },
   ];
 
-  const [currentSlide, setCurrentSlide] = useState(1);
-  const totalReviews = reviews.length;
-
-  useEffect(() => {
-    // Listen for custom slide change event
-    const handleSlideChange = (e: any) => {
-      setCurrentSlide(e.detail.realIndex + 1);
-    };
-
-    window.addEventListener('reviewSlideChange', handleSlideChange);
-    
-    return () => {
-      window.removeEventListener('reviewSlideChange', handleSlideChange);
-    };
-  }, []);
-
   return (
     <section id="reviews" className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-6xl">
@@ -114,7 +97,7 @@ const Reviews = () => {
         </div>
 
         {/* Reviews carousel */}
-        <div className="swiper-container reviews-swiper relative" style={{ overflow: 'visible', paddingBottom: '3rem' }} data-aos="fade-up" data-aos-delay="400">
+        <div className="swiper-container reviews-swiper relative" style={{ overflow: 'visible', paddingBottom: '3rem', minHeight: '200px' }} data-aos="fade-up" data-aos-delay="400">
           <div className="swiper-wrapper" style={{ display: 'flex' }}>
             {reviews.map((review, index) => (
               <div key={index} className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
@@ -147,15 +130,8 @@ const Reviews = () => {
             ))}
           </div>
 
-          {/* Swiper pagination dots - hidden but needed for functionality */}
+          {/* Swiper pagination dots - hidden */}
           <div className="swiper-pagination" style={{ display: 'none' }}></div>
-
-          {/* Custom pagination text */}
-          <div className="mt-8 text-center">
-            <p className="text-sm md:text-base break-words" style={{ color: 'hsl(var(--muted-foreground))', fontFamily: 'Poppins' }}>
-              Showing {currentSlide} out of {totalReviews} reviews
-            </p>
-          </div>
         </div>
       </div>
     </section>

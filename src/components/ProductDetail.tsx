@@ -15,8 +15,8 @@ const ProductDetail = () => {
 
   useEffect(() => {
     const calculateTimeLeft = () => {
-      // Timer runs from Oct 17, 2025 to Oct 21, 2025 23:59:59 IST
-      const saleEndDate = new Date('2025-10-21T23:59:59+05:30').getTime();
+      // Timer runs from Oct 21, 2025 to Oct 28, 2025 23:59:59 IST
+      const saleEndDate = new Date('2025-10-28T23:59:59+05:30').getTime();
       const now = new Date().getTime();
       const difference = saleEndDate - now;
 
@@ -48,9 +48,8 @@ const ProductDetail = () => {
   };
 
   const previewPages = [
-    { src: nnnCover, title: 'Custom Thumbnail: NNN Challenge Kickoff', alt: 'Cover page of No Nut November eBook' },
-    { src: nnnPageDopamine, title: 'Testimonial Page: Dopamine Detox Protocol', alt: 'Preview of dopamine detox morning routine page from NNN eBook' },
     { src: nnnPageBulking, title: 'Success Strategy: Bulking Workout Plan', alt: 'Preview of bulking workout schedule page from NNN eBook' },
+    { src: nnnPageDopamine, title: 'Testimonial Page: Dopamine Detox Protocol', alt: 'Preview of dopamine detox morning routine page from NNN eBook' },
   ];
 
   return (
@@ -109,32 +108,27 @@ const ProductDetail = () => {
             </p>
           </div>
 
-          {/* PDF Preview */}
+          {/* PDF Preview - Static Vertical Layout */}
           <div className="mb-10" data-aos="fade-up" data-aos-delay="1000">
             <h3 className="text-2xl font-semibold text-primary text-center mb-6">
               Inside the Guide: Real Pages Preview
             </h3>
-            <div className="swiper-container preview-swiper relative">
-              <div className="swiper-wrapper">
-                {previewPages.map((page, index) => (
-                  <div key={index} className="swiper-slide h-auto">
-                    <div className="border-4 border-primary/20 rounded-lg overflow-hidden hover:border-primary/50 transition-colors">
-                      <img
-                        src={page.src}
-                        alt={page.alt}
-                        className="w-full h-auto max-h-[600px] object-contain transform hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                      <p className="text-center text-sm font-medium text-primary py-3 bg-secondary/30 break-words">
-                        {page.title}
-                      </p>
-                    </div>
+            <div className="flex flex-col gap-4 items-center max-w-[90%] mx-auto">
+              {previewPages.map((page, index) => (
+                <div key={index} className="w-full">
+                  <div className="border-4 border-primary/20 rounded-lg overflow-hidden">
+                    <img
+                      src={page.src}
+                      alt={page.alt}
+                      className="w-full h-auto max-h-[600px] object-contain"
+                      loading="lazy"
+                    />
+                    <p className="text-center text-sm font-medium text-primary py-3 bg-secondary/30 break-words">
+                      {page.title}
+                    </p>
                   </div>
-                ))}
-              </div>
-              <div className="swiper-pagination mt-4"></div>
-              <div className="swiper-button-next"></div>
-              <div className="swiper-button-prev"></div>
+                </div>
+              ))}
             </div>
           </div>
 
