@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
-import Reviews from '@/components/Reviews';
 import ProductDetail from '@/components/ProductDetail';
 import About from '@/components/About';
 import ReviewForm from '@/components/ReviewForm';
@@ -27,33 +26,8 @@ const Index = () => {
       offset: 100,
     });
 
-    // Initialize Swiper for reviews
+    // Initialize Swiper for preview pages
     setTimeout(() => {
-      new Swiper('.reviews-swiper', {
-        modules: [Pagination, Autoplay],
-        slidesPerView: 1,
-        spaceBetween: 20,
-        loop: true,
-        autoHeight: false,
-        autoplay: {
-          delay: 5000,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.reviews-swiper .swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 2,
-          },
-          1024: {
-            slidesPerView: 3,
-          },
-        },
-      });
-
-      // Initialize Swiper for preview pages
       new Swiper('.preview-swiper', {
         modules: [Pagination, Navigation],
         slidesPerView: 1,
@@ -89,7 +63,6 @@ const Index = () => {
         <Hero />
         <ProductDetail />
         <Features />
-        <Reviews />
         <ReviewForm />
         <About />
       </main>

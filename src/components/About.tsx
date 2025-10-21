@@ -7,7 +7,7 @@ const About = () => {
           data-aos="fade-up"
           style={{ color: 'hsl(var(--primary))' }}
         >
-          About visionaryX store
+          About venzorX store
         </h2>
         
         <div
@@ -17,7 +17,7 @@ const About = () => {
         >
           <div className="space-y-6 text-lg leading-relaxed" style={{ color: 'hsl(var(--muted-foreground))' }}>
             <p>
-              <span className="font-semibold" style={{ color: 'hsl(var(--primary))' }}>visionaryX store</span> is your trusted destination for premium digital products that transform lives. We specialize in delivering high-quality, research-backed guides and resources designed specifically for ambitious individuals seeking real results.
+              <span className="font-semibold" style={{ color: 'hsl(var(--primary))' }}>venzorX store</span> is your trusted destination for premium digital products that transform lives. We specialize in delivering high-quality, research-backed guides and resources designed specifically for ambitious individuals seeking real results.
             </p>
             
             <p>
@@ -37,7 +37,7 @@ const About = () => {
             </p>
             
             <p className="font-medium pt-4" style={{ color: 'hsl(var(--foreground))' }}>
-              Join the visionaryX community and experience the difference that quality, research, and genuine care can make in your personal growth journey.
+              Join the venzorX community and experience the difference that quality, research, and genuine care can make in your personal growth journey.
             </p>
           </div>
         </div>
