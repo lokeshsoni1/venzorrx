@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Social Links */}
           <div className="flex gap-6">
             <a
-              href="https://www.instagram.com/visionaryx.official/"
+              href="https://www.instagram.com/venzorr.x/"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all hover:scale-110 transform"
@@ -26,7 +26,7 @@ const Footer = () => {
               <Instagram className="w-6 h-6" />
             </a>
             <a
-              href="https://t.me/+SUIBDkIacF02OWE1"
+              href="https://t.me/+36Q7WA_Ft0gzOTk9"
               target="_blank"
               rel="noopener noreferrer"
               className="transition-all hover:scale-110 transform"
