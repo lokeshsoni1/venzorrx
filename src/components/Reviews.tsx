@@ -97,10 +97,10 @@ const Reviews = () => {
         </div>
 
         {/* Reviews carousel */}
-        <div className="swiper-container reviews-swiper relative" style={{ overflow: 'visible', paddingBottom: '3rem', minHeight: '200px' }} data-aos="fade-up" data-aos-delay="400">
-          <div className="swiper-wrapper" style={{ display: 'flex' }}>
+        <div className="swiper-container reviews-swiper relative" data-aos="fade-up" data-aos-delay="400" style={{ overflow: 'visible', paddingBottom: '3rem', minHeight: '300px' }}>
+          <div className="swiper-wrapper">
             {reviews.map((review, index) => (
-              <div key={index} className="swiper-slide" style={{ height: 'auto', display: 'flex' }}>
+              <div key={index} className="swiper-slide">
                 <div className="rounded-[20px] p-6 w-full flex flex-col border border-border break-words" style={{ backgroundColor: 'hsl(var(--card))', minHeight: '280px' }}>
                   {/* Avatar */}
                   <div className="flex justify-center mb-4">

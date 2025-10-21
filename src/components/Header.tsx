@@ -34,9 +34,9 @@ const Header = () => {
           <button
             onClick={() => scrollToSection('hero')}
             className="text-foreground font-bold text-2xl tracking-wide hover:text-primary transition-colors"
-            aria-label="visionaryX store - Home"
+            aria-label="VenzorX Store - Home"
           >
-            visionaryX store
+            VenzorX Store
           </button>
 
           {/* Desktop Navigation */}
